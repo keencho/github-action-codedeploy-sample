@@ -34,6 +34,9 @@ jobs:
     - name: Move Jar
       run: mv ./build/libs/*.jar ./dist/application.jar
 
+    - name: Change appspec.yml Permission
+      run: chmod 700 ./codedeploy/appspec.yml
+
     - name: Move CodeDeploy Script
       run: mv ./codedeploy/* ./dist/
 
